@@ -9,7 +9,7 @@ if($get != ''){
     $file = $res2['id'];
     if($file !=''){
         $del = $db->query("DELETE FROM `user_file` WHERE `user_file`.`id` = '$file'");
-        $name = "http://localhost/users_file/root/".$res2['link'];
+        $name = "../users_file/root/".$res2['link'];
         unlink($name);
         header('location: http://localhost/index.php?id=files');
     }
