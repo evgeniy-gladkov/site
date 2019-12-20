@@ -1,5 +1,5 @@
 <?php
-include_once "db.php";
+include "db.php";
 $get = $_GET['file'];
 if($get != ''){
     $res = $db->query("SELECT `link` FROM user_file WHERE `hash` = '$get'");

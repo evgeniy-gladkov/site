@@ -1,4 +1,5 @@
 <?php
+//test git
 if(!isset($_COOKIE['name'])){
     echo "<!DOCTYPE html>
 <html lang='ru'>
@@ -12,7 +13,7 @@ if(!isset($_COOKIE['name'])){
 <form action='login.php' method='POST'>
     <input type='text' name='login'>
     <input type='password' name='password'>
-    <input type='submit' value='ОТПРАВИТЬ'>
+    <input type='submit' value='ВХОД'>
     <p>login : root pass : 1234</p>
     <a href='reg.php'>регистрация</a>
 </form>
@@ -37,7 +38,7 @@ echo $_COOKIE['error'];
 
     
     switch($_SERVER['QUERY_STRING']){
-        case 'id=files': include_once 'file.php'; break;
+        case 'id=files': include_once 'icloud/file.php'; break;
         default: echo "такой страницы нет";
     }
 echo "</body>

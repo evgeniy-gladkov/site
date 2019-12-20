@@ -1,10 +1,8 @@
 <?php
 include "db.php";
 $login = trim($_POST['login']);
-$password = trim($_POST['password']);
+$password = md5(trim($_POST['password']));
 if(!empty($login) && !empty($password)){
-    $login = trim($_POST['login']);
-    $password = trim($_POST['password']);
     $sql = "SELECT `name` FROM `user` WHERE `name` = :login";
     $param = ['login' => $login];
     $stmt = $db->prepare($sql);

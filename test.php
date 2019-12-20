@@ -19,5 +19,6 @@ $stmt->execute($param); */
 //$text = "ÐœÐ°ÑÑ‚Ð½Ð¸Ðº.mp3";
 /* $interenc = mb_internal_encoding();
 $inputenc = mb_convert_variables($interenc, "ASCII,UTF-8,SJIS-win", $post1, $post2); */
-echo phpinfo();
+//echo phpinfo();
+//echo md5("1234");
 ?>

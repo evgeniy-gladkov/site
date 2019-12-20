@@ -13,7 +13,7 @@ include "db.php";
     exit;
 } */
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
+if($_SERVER['REQUEST_METHOD'] == 'POST' && $_FILES["inputfile"]["name"]==TRUE){
     $h = md5_file($_FILES["inputfile"]["tmp_name"]);
     $rezult = move_uploaded_file($_FILES["inputfile"]["tmp_name"], "users_file/root/".$_FILES["inputfile"]["name"]);
     $n = $_COOKIE['name'];
@@ -22,6 +22,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $param = ['name' => $n, 'hash' => $h, 'link' => $l];
     $stmt = $db->prepare($sql);
     $stmt->execute($param);
-    header("location: index.php?id=files");
+    header("location: http://localhost/index.php?id=files");
 }
+header("location: http://localhost/index.php?id=files");
+//echo $_POST['inputfile'];
 ?>

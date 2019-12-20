@@ -2,7 +2,7 @@
 include_once 'db.php';
 
 $login = trim($_POST['login']);
-$password = trim($_POST['password']);
+$password = md5(trim($_POST['password']));
 
 if(!empty($login) && !empty($password)){
     $sql = 'SELECT name, password FROM user WHERE name = :login';
