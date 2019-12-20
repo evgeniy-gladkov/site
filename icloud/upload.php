@@ -15,7 +15,7 @@ include "db.php";
 
 if($_SERVER['REQUEST_METHOD'] == 'POST' && $_FILES["inputfile"]["name"]==TRUE){
     $h = md5_file($_FILES["inputfile"]["tmp_name"]);
-    $rezult = move_uploaded_file($_FILES["inputfile"]["tmp_name"], "users_file/root/".$_FILES["inputfile"]["name"]);
+    $rezult = move_uploaded_file($_FILES["inputfile"]["tmp_name"], "../users_file/root/".$_FILES["inputfile"]["name"]);
     $n = $_COOKIE['name'];
     $l = $_FILES["inputfile"]["name"];
     $sql="INSERT INTO user_file (name, hash, link) VALUES (:name, :hash, :link)";
