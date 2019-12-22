@@ -14,17 +14,18 @@ if(!isset($_COOKIE['name'])){
     <div class='entry'>
         <form class='form' action='login.php' method='POST'>
             <p align='center'>ВХОД</p>
-            <input class='login' type='text' name='login'><br>
-            <input class='pass' type='password' name='password'><br>
-            <input type='submit' value='ВХОД'>
+            <input class='login' type='text' name='login' placeholder='login'><br>
+            <input class='pass' type='password' name='password' placeholder='password'><br>
+            <input class='submit' type='submit' value='ВХОД'>
             <p>login : root pass : 1234</p>
-            <a href='reg.php'>регистрация</a>
+            <a class='reg' href='reg.php'>регистрация</a>";
+            echo $_COOKIE['error']."
         </form>
     </div>
 </hr>   
 </body>
 </html>";
-echo $_COOKIE['error'];
+
 }else{
     echo "<!DOCTYPE html>
 <html lang='ru'>

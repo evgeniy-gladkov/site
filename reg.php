@@ -12,10 +12,10 @@
 <div class='entry'>    
     <form class='form' action="pf.php" method="POST">
         <p align='center'>РЕГИСТРАЦИЯ</p>
-        <input class='login' type="text" name="login"><br>
-        <input class='pass' type="password" name="password"><br>
-        <input type="submit" value="зарегистрация"><br>
-        <p></p><a href="index.php">Главная</a>
+        <input class='login' type="text" name="login" placeholder='login'><br>
+        <input class='pass' type="password" name="password" placeholder='password'><br>
+        <input class='submit' type="submit" value="зарегистрация"><br>
+        <br><a class='reg' href="index.php">Главная</a>
         <?php
             if(!isset($_COOKIE['name'])){
                 echo "<br>".$_COOKIE['error'];

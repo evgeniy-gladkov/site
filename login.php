@@ -16,15 +16,15 @@ if(!empty($login) && !empty($password)){
             setcookie("name", $user->name, time()+3600);
             header('location: index.php');
         }else{
-            setcookie("error", "НЕ ВЕРНЫЙ ЛОГИН ИЛИ ПАРОЛЬ", time()+3);
+            setcookie("error", "<p>НЕВЕРНЫЙ ЛОГИН ИЛИ ПАРОЛЬ</p>", time()+3);
             header('location: index.php'); 
         }
     }else{
-        setcookie("error", "НЕ ВЕРНЫЙ ЛОГИН ИЛИ ПАРОЛЬ", time()+3);
+        setcookie("error", "<p>НЕВЕРНЫЙ ЛОГИН ИЛИ ПАРОЛЬ</p>", time()+3);
         header('location: index.php'); 
     }
 
 }else{
-    setcookie("error", "ПОЛЯ НЕ ЗАПОЛНЕНЫ", time()+3);
+    setcookie("error", "<p>ПОЛЯ НЕ ЗАПОЛНЕНЫ</p>", time()+3);
     header('location: index.php'); 
 }
