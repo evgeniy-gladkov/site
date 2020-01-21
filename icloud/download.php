@@ -2,9 +2,9 @@
 include "db.php";
 $get = $_GET['file'];
 if($get != ''){
-    $res = $db->query("SELECT `link` FROM user_file WHERE `hash` = '$get'");
+    $res = $db->query("SELECT `mylinks` FROM user_file WHERE `hash` = '$get'");
     $res2=$res->fetch();
-    $file = $res2['link'];
+    $file = $res2['mylinks'];
     if($file != ''){
         $file2 = "/var/www/html/users_file/root/".$file;
         if (file_exists($file2)) {
