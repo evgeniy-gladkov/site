@@ -1,7 +1,23 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
-include_once "db.php";
+
+//echo "<img src='users_file/root/1.jpeg' width='70px' height='70px'></img></br>";
+//echo "<audio src='users_file/root/2.mp3' controls></audio></br>";
+//echo "<video width='300px' height='250px' src='users_file/root/SVID_20200119_194739_1.mp4' controls></video></br>";
+
+    //echo date("d-m-Y");
+
+/* $string1 = " bngvvn.mp3";
+function type_file($string){
+    if($string){
+        $wiwid = explode('.', $string);
+        $count = count($wiwid);
+        return $wiwid[$count-1];
+    }
+};
+type_file($string1); */
+//include_once "db.php";
 /* if (!mkdir("test", 0777)) {
     die('Не удалось создать директории...');
 } */

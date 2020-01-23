@@ -22,7 +22,7 @@ if(!isset($_COOKIE['name'])){
             echo $_COOKIE['error']."
         </form>
     </div>
-</hr>   
+   
 </body>
 </html>";
 
@@ -38,23 +38,29 @@ if(!isset($_COOKIE['name'])){
 </head>
 <body>";
     echo "<div class='wraper'>";
-        echo "<div class='menu'>";
-        echo "<a href='index.php'><p class='link-menu'>".$_COOKIE['name']."</p></a>";
-        echo "<a href='index.php?id=files'><p class='link-menu'>FILES</p></a>";
-        echo "<a href='quit.php'><p class='link-menu'>Выход</p></a>";
-    echo "</div>";
+            echo "<div class='menu'>";
+                echo "<a class='link-menu' href='index.php'>".$_COOKIE['name']."</a>";
+                echo "<a class='link-menu' href='index.php?id=files'>ALL FILES</a>";
+                echo "<a class='link-menu' href='index.php?id=photo'>PHOTO</a>";
+                echo "<a class='link-menu' href='index.php?id=music'>MUSIC</a>";
+                echo "<a class='link-menu' href='index.php?id=video'>VIDEO</a>";
+                echo "<a class='link-menu' href='quit.php'>Выход</a>";
+            echo "</div>";
 
-    echo "<div class='content'>";
-    switch($_SERVER['QUERY_STRING']){
-        case 'id=files': include_once 'icloud/file.php'; break;
-        default: echo "такой страницы нет";
-    }
-    echo "</div>";
+            echo "<div class='content'>";
+                    switch($_SERVER['QUERY_STRING']){
+                        case 'id=files': include_once 'file.php'; break;
+                        case 'id=photo': include_once 'photo.php'; break;
+                        case 'id=music': include_once 'music.php'; break;
+                        case 'id=video': include_once 'video.php'; break;
+                        //default: echo "<img class='img' width='100px' height='100px'  src='users_file/root/2.mp3'></img>";
+                        //default: include_once 'test.php';
+                    }
+            echo "</div>";
     echo "</div>";
 echo "</body>
 </html>";
 } 
-
 /* СОРТИРОВКА ФАЙЛОВ ПО КАТАЛОГАМ */
 //echo fileperms("users_file/root2");  
 ?>
